@@ -1,0 +1,23 @@
+[
+  {
+    "model": "api.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$dn11XynO6b1bP0otfLdmyG$ek6j+MLym3+K9/e8eUvIquRDHpg7s3G2YrHLiwDv5vg=",
+      "last_login": "2022-03-07T08:28:14.747Z",
+      "is_superuser": true,
+      "first_name": "Test",
+      "last_name": "Seed",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-02-26T06:51:56.516Z",
+      "username": "testtest",
+      "email": "testtest@email.com",
+      "patient_status": false,
+      "doctor_status": false,
+      "admin_status": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
