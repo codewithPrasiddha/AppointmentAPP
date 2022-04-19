@@ -134,7 +134,7 @@ class _HomeState extends State<Home> {
                           child: Text("Search"),
                           onTap: () async {
                             final response = await http.get(Uri.parse(
-                                'http://127.0.0.1:8000/api/v1/users/'));
+                                'http://10.0.2.2:8000/api/v1/users/'));
                             var body = json.decode(response.body);
                             String a = '';
                             String b = '';
@@ -220,8 +220,7 @@ class _HomeState extends State<Home> {
                                                   .size
                                                   .height *
                                               0.78,
-                                          color:
-                                          Color(0xFFFFFFFF),
+                                          color: Color(0xFFFFFFFF),
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Center(

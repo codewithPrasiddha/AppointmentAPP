@@ -88,7 +88,7 @@ class _ChatPageState extends State<ChatPage> {
       });
     });
     try {
-      socket = io("http://127.0.0.1:3000", <String, dynamic>{
+      socket = io("http://10.0.2.2:3000", <String, dynamic>{
         "transports": ["websocket"],
         "autoConnect": false,
       });
@@ -139,7 +139,7 @@ class _ChatPageState extends State<ChatPage> {
       appBar: AppBar(
           centerTitle: true,
           title: Text('Chat'),
-          backgroundColor: Color.fromRGBO(88, 124, 202,1.0)),
+          backgroundColor: Color.fromRGBO(88, 124, 202, 1.0)),
       body: SafeArea(
         child: Container(
           color: const Color(0xFFEAEFF2),
@@ -209,7 +209,7 @@ class _ChatPageState extends State<ChatPage> {
                       height: 43,
                       width: 42,
                       child: FloatingActionButton(
-                        backgroundColor: Color.fromRGBO(88, 124, 202,1.0),
+                        backgroundColor: Color.fromRGBO(88, 124, 202, 1.0),
                         onPressed: () async {
                           if (_messageController.text.trim().isNotEmpty) {
                             String message = _messageController.text.trim();

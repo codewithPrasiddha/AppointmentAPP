@@ -39,121 +39,93 @@ class _LoginState extends State<Login> {
         extendBodyBehindAppBar: true,
         body: Stack(
           children: [
-            Container(
-              decoration:
-                  BoxDecoration(color: Color(0xFFFFFFFF)),
-            ),
-            SafeArea(
-              child: ListView(children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                      top: 16, left: 16.0, right: 16.0, bottom: 32),
-                  child: Card(
-                      elevation: 5,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4.0),
+            // Container(
+            //   decoration:
+            //       BoxDecoration(color: Color(0xFFFFFFFF)),
+            // ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 100, left: 16.0, right: 16.0, bottom: 32),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Center(
+                    child: Image.asset(
+                      'assets/imgs/vhc.png',
+                      height: 330,
+                      width: 300,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 20,
                       ),
-                      child: Container(
-                          height: MediaQuery.of(context).size.height * 0.78,
-                          color: Color(0xFFFFFFFF),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Center(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Center(
-                                    child: Image.asset('assets/imgs/vhc.png',
-                                      height: 250,
-                                      width: 230,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 8.0,
-                                            left: 8.0,
-                                            right: 8.0,
-                                            bottom: 0),
-                                        child: Input(
-                                            placeholder: "Email",
-                                            onChanged: (value) {},
-                                            controller: emailController,
-                                            prefixIcon:
-                                                Icon(Icons.lock, size: 20)),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 8.0,
-                                            left: 8.0,
-                                            right: 8.0,
-                                            bottom: 0),
-                                        child: Input(
-                                            placeholder: "Password",
-                                            controller: passwordController,
-                                            pass: true,
-                                            prefixIcon:
-                                                Icon(Icons.lock, size: 20)),
-                                      ),
-                                      Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 8.0,
-                                              left: 8.0,
-                                              right: 8.0,
-                                              bottom: 0),
-                                          child: InkWell(
-                                            child: Text('Create an account',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.black)),
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                new MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Register()),
-                                              );
-                                            },
-                                          )),
-                                    ],
-                                  ),
-                                  Center(
-                                    child: RaisedButton(
-                                      textColor: NowUIColors.white,
-                                      color: NowUIColors.primary,
-                                      onPressed: () {
-                                        // Respond to button press
+                      Input(
+                          placeholder: "Email",
+                          onChanged: (value) {},
+                          controller: emailController,
+                          prefixIcon: Icon(Icons.email, size: 20)),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 8.0, left: 8.0, right: 8.0, bottom: 0),
+                        child: Input(
+                            placeholder: "Password",
+                            controller: passwordController,
+                            pass: true,
+                            prefixIcon: Icon(Icons.lock, size: 20)),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(
+                              top: 8.0, left: 8.0, right: 8.0, bottom: 0),
+                          child: InkWell(
+                            child: Text('Create an account',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black)),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                new MaterialPageRoute(
+                                    builder: (context) => Register()),
+                              );
+                            },
+                          )),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Center(
+                    child: RaisedButton(
+                      textColor: NowUIColors.white,
+                      color: NowUIColors.primary,
+                      onPressed: () {
+                        // Respond to button press
 
-                                        loginForm();
-                                      },
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                        BorderRadius.circular(32.0),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 40.0,
-                                            right: 40.0,
-                                            top: 12,
-                                            bottom: 12),
-                                        child: Text("Login",
-                                            style: TextStyle(fontSize: 14.0)),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ))),
-                ),
-              ]),
+                        loginForm();
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(32.0),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            left: 40.0, right: 40.0, top: 12, bottom: 12),
+                        child: Text("Login", style: TextStyle(fontSize: 14.0)),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ));
@@ -181,22 +153,16 @@ class _LoginState extends State<Login> {
       localStorage.setString('user', b.toString());
 
       localStorage.setString('id', body['user']['pk'].toString());
-      if(b['patient_status'])
-        {
-          localStorage.setString('r', '2');
-        }
-      else if(b['doctor_status'])
-      {
+      if (b['patient_status']) {
+        localStorage.setString('r', '2');
+      } else if (b['doctor_status']) {
         localStorage.setString('r', '3');
-      }
-      else if(b['admin_status'])
-      {
+      } else if (b['admin_status']) {
         localStorage.setString('r', '1');
       }
 
       if (b['doctor_status']) {
         Navigator.pushNamed(context, '/appointment');
-
       } else if (b['admin_status']) {
         Navigator.pushNamed(context, '/doctor');
       } else {
