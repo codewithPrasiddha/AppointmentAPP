@@ -166,7 +166,7 @@ class _NavbarState extends State<Navbar> {
                         }),
                   ),
                 SizedBox(
-                  height: 10.0,
+                  height: 1,
                 ),
                 if (categories)
                   Row(
@@ -194,7 +194,7 @@ class _NavbarState extends State<Navbar> {
                       SizedBox(width: 30),
                       Container(
                         color: NowUIColors.text,
-                        height: 25,
+                        height: 1,
                         width: 1,
                       ),
                       SizedBox(width: 30),

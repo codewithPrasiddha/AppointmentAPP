@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:appointmentapp/screens/appointments.dart';
+import 'package:appointmentapp/screens/forgotpassword.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -43,88 +44,109 @@ class _LoginState extends State<Login> {
             //   decoration:
             //       BoxDecoration(color: Color(0xFFFFFFFF)),
             // ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  top: 100, left: 16.0, right: 16.0, bottom: 32),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Center(
-                    child: Image.asset(
-                      'assets/imgs/vhc.png',
-                      height: 330,
-                      width: 300,
-                      fit: BoxFit.cover,
+            SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 100, left: 16.0, right: 16.0, bottom: 32),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Center(
+                      child: Image.asset(
+                        'assets/imgs/vhc.png',
+                        height: 330,
+                        width: 300,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Input(
-                          placeholder: "Email",
-                          onChanged: (value) {},
-                          controller: emailController,
-                          prefixIcon: Icon(Icons.email, size: 20)),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            top: 8.0, left: 8.0, right: 8.0, bottom: 0),
-                        child: Input(
-                            placeholder: "Password",
-                            controller: passwordController,
-                            pass: true,
-                            prefixIcon: Icon(Icons.lock, size: 20)),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Padding(
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Input(
+                            placeholder: "Email",
+                            onChanged: (value) {},
+                            controller: emailController,
+                            prefixIcon: Icon(Icons.email, size: 20)),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Padding(
                           padding: const EdgeInsets.only(
                               top: 8.0, left: 8.0, right: 8.0, bottom: 0),
-                          child: InkWell(
-                            child: Text('Create an account',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black)),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                new MaterialPageRoute(
-                                    builder: (context) => Register()),
-                              );
-                            },
-                          )),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Center(
-                    child: RaisedButton(
-                      textColor: NowUIColors.white,
-                      color: NowUIColors.primary,
-                      onPressed: () {
-                        // Respond to button press
+                          child: Input(
+                              placeholder: "Password",
+                              controller: passwordController,
+                              pass: true,
+                              prefixIcon: Icon(Icons.lock, size: 20)),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(
+                                top: 8.0, left: 8.0, right: 8.0, bottom: 0),
+                            child: InkWell(
+                              child: Text('Create an account',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      color: Colors.black)),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (context) => Register()),
+                                );
+                              },
+                            )),
 
-                        loginForm();
-                      },
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 40.0, right: 40.0, top: 12, bottom: 12),
-                        child: Text("Login", style: TextStyle(fontSize: 14.0)),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 8.0, left: 8.0, right: 8.0, bottom: 0),
+                            child: InkWell(
+                              child: Text('Forgot your password?',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blueAccent)),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (context) => ForgotPassword()),
+                                );
+                              },
+                            )
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Center(
+                      child: RaisedButton(
+                        textColor: NowUIColors.white,
+                        color: NowUIColors.primary,
+                        onPressed: () {
+                          // Respond to button press
+
+                          loginForm();
+                        },
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32.0),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                              left: 40.0, right: 40.0, top: 12, bottom: 12),
+                          child: Text("Login", style: TextStyle(fontSize: 14.0)),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             )
           ],

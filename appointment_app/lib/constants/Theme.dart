@@ -5,6 +5,8 @@ class NowUIColors {
 
   static const Color white = Color(0xFFFFFFFF);
 
+  static const Color navbar = Color.fromRGBO(88, 124, 202,1.0);
+
   static const Color primary = Color.fromRGBO(88, 124, 202,1.0);
 
   static const Color tabs = Color.fromRGBO(222, 222, 222, 0.3);

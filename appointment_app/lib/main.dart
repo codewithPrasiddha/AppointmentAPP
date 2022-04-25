@@ -1,4 +1,4 @@
-import 'package:appointmentapp/screens/khalti_payment_page.dart';
+import 'package:appointmentapp/screens/forgotpassword.dart';
 import 'package:flutter/material.dart';
 
 import 'package:appointmentapp/screens/addDoctor.dart';
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
                 "/register": (BuildContext context) => new Register(),
                 "/login": (BuildContext context) => new Login(),
                 "/payment": (BuildContext context) => new Payment(),
+                "/forgot": (BuildContext context) => new ForgotPassword(),
               });
         }
     );

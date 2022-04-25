@@ -18,7 +18,7 @@ final Map<String, Map<String, String>> homeCards = {
   "Doctors": {
     "title": "Doctors",
     "image":
-        "https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        "https://img.freepik.com/free-vector/couple-doctors-with-stethoscope-avatar-character_24877-63673.jpg?t=st=1650699644~exp=1650700244~hmac=598a49015fa9b6434e971b44b7ca60d8e7e667e070c1d14cc9a76be9fabbf23c&w=1060"
   },
   "Appointment": {
     "title": "Appointment",
@@ -105,6 +105,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Navbar(
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
           title: "Home",
         ),
         backgroundColor: Color(0xFFFFFFFF),
@@ -134,7 +135,8 @@ class _HomeState extends State<Home> {
                           child: Text("Search"),
                           onTap: () async {
                             final response = await http.get(Uri.parse(
-                                'http://10.0.2.2:8000/api/v1/users/'));
+                              'http://127.0.0.1:8000/api/v1/users/'));
+                              //'http://10.0.2.2:8000/api/v1/users/'));
                             var body = json.decode(response.body);
                             String a = '';
                             String b = '';
@@ -194,7 +196,7 @@ class _HomeState extends State<Home> {
                         )),
                   ],
                 ),
-                SizedBox(height: 8.0),
+                SizedBox(height: 0),
                 Center(
                   child: FutureBuilder<List<Data>>(
                     future: futureData,
@@ -219,7 +221,7 @@ class _HomeState extends State<Home> {
                                           height: MediaQuery.of(context)
                                                   .size
                                                   .height *
-                                              0.78,
+                                              0.50,
                                           color: Color(0xFFFFFFFF),
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
@@ -281,7 +283,7 @@ class _HomeState extends State<Home> {
                                                     Padding(
                                                         padding:
                                                             EdgeInsets.only(
-                                                                left: 8.0)),
+                                                                left: 65.0)),
                                                     Center(
                                                       child: RaisedButton(
                                                         textColor:
@@ -305,12 +307,13 @@ class _HomeState extends State<Home> {
                                                                                 data[index].about,
                                                                           )));
                                                         },
-                                                        shape:
-                                                            RoundedRectangleBorder(),
+                                                        shape: RoundedRectangleBorder(),
                                                         child: Padding(
-                                                            padding:
-                                                                EdgeInsets.all(
-                                                                    16.0),
+                                                            padding: EdgeInsets.only(
+                                                                left: 12.0,
+                                                                right: 12.0,
+                                                                top: 12,
+                                                                bottom: 12),
                                                             child: Text(
                                                                 "Book Appointment",
                                                                 style: TextStyle(
@@ -332,7 +335,7 @@ class _HomeState extends State<Home> {
                     },
                   ),
                 ),
-                SizedBox(height: 8.0),
+                SizedBox(height: 4.0),
               ],
             ),
           ),

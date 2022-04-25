@@ -137,6 +137,7 @@ class _AppointmentState extends State<Appointment> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: Navbar(
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
           title: "Appointments",
           rightOptions: false,
         ),
@@ -147,14 +148,6 @@ class _AppointmentState extends State<Appointment> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                  ),
-                  Text('Upcoming Appointments',
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black)),
                   Padding(
                     padding: const EdgeInsets.only(top: 16.0),
                   ),
@@ -184,7 +177,7 @@ class _AppointmentState extends State<Appointment> {
                                             height: MediaQuery.of(context)
                                                     .size
                                                     .height *
-                                                0.78,
+                                                0.50,
                                             color: Color(0xFFFFFFFF),
                                             child: Padding(
                                               padding:

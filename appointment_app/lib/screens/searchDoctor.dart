@@ -85,6 +85,7 @@ class _SearchDoctorState extends State<SearchDoctor> {
         resizeToAvoidBottomInset: false,
         appBar: Navbar(
           title: "Search Result",
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
           rightOptions: false,
         ),
         backgroundColor: NowUIColors.bgColorScreen,
@@ -141,7 +142,7 @@ class _SearchDoctorState extends State<SearchDoctor> {
                         borderRadius: BorderRadius.circular(4.0),
                       ),
                       child: Container(
-                          height: MediaQuery.of(context).size.height * 0.78,
+                          height: MediaQuery.of(context).size.height * 0.50,
                           color: Color(0xFFFFFFFF),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -173,23 +174,9 @@ class _SearchDoctorState extends State<SearchDoctor> {
                                           Icon(Icons.star),
                                         ],
                                       ),
-                                      Text('About')
                                     ],
                                   ),
                                   Row(children: [
-                                    Center(
-                                      child: RaisedButton(
-                                        textColor: NowUIColors.white,
-                                        color: NowUIColors.primary,
-                                        onPressed: () {},
-                                        shape: RoundedRectangleBorder(),
-                                        child: Padding(
-                                            padding: EdgeInsets.all(16.0),
-                                            child: Text("Consult Online",
-                                                style:
-                                                    TextStyle(fontSize: 14.0))),
-                                      ),
-                                    ),
                                     Padding(
                                         padding: EdgeInsets.only(left: 8.0)),
                                     Center(

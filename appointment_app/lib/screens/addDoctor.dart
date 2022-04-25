@@ -41,6 +41,7 @@ class _AddDoctorState extends State<AddDoctor> {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: Navbar(
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
           title: "Add Doctors",
           rightOptions: false,
         ),
@@ -189,6 +190,12 @@ class _AddDoctorState extends State<AddDoctor> {
                                       ),
                                     ],
                                   ),
+                                  //Vertical Spacing for widgets
+                                  Column(
+                                    children: <Widget>[
+                                      SizedBox(height: 20),
+                                    ],
+                                  ),
                                   Center(
                                     child: RaisedButton(
                                       textColor: NowUIColors.white,
@@ -201,6 +208,7 @@ class _AddDoctorState extends State<AddDoctor> {
                                         borderRadius:
                                             BorderRadius.circular(32.0),
                                       ),
+
                                       child: Padding(
                                           padding: EdgeInsets.only(
                                               left: 32.0,
@@ -212,6 +220,14 @@ class _AddDoctorState extends State<AddDoctor> {
                                                   TextStyle(fontSize: 14.0))),
                                     ),
                                   ),
+
+                                  //Vertical Spacing for widgets
+                                  Column(
+                                    children: <Widget>[
+                                      SizedBox(height: 20),
+                                    ],
+                                  ),
+
                                   Center(
                                     child: InkWell(
                                       onTap: () {

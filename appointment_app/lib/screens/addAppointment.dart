@@ -97,8 +97,8 @@ class _AddAppointmentState extends State<AddAppointment> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Navbar(
-          transparent: true,
-          title: "",
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
+          title: "Appointment",
           reverseTextcolor: true,
         ),
         extendBodyBehindAppBar: true,

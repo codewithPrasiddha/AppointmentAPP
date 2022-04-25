@@ -88,7 +88,8 @@ class _ChatPageState extends State<ChatPage> {
       });
     });
     try {
-      socket = io("http://10.0.2.2:3000", <String, dynamic>{
+      socket = io("http://127.0.0.1:3000", <String, dynamic>{
+      //socket = io("http://10.0.2.2:3000", <String, dynamic>{
         "transports": ["websocket"],
         "autoConnect": false,
       });
@@ -233,7 +234,7 @@ class _ChatPageState extends State<ChatPage> {
                         },
                         mini: true,
                         child: Transform.rotate(
-                            angle: 4.7,
+                            angle: 6.3,
                             child: const Icon(Icons.send, size: 20)),
                       ),
                     ),

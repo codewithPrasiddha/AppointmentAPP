@@ -88,6 +88,7 @@ class _DoctorState extends State<Doctor> {
         resizeToAvoidBottomInset: false,
         backgroundColor: Color(0xFFFFFFFF),
         appBar: Navbar(
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
           title: "Doctors",
           rightOptions: false,
         ),

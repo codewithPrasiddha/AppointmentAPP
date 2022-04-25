@@ -75,6 +75,7 @@ class _PaymentState extends State<Payment> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Navbar(
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
           title: "Payment",
         ),
         backgroundColor: Color(0xFFFFFFFF),
@@ -115,7 +116,7 @@ class _PaymentState extends State<Payment> {
                                       CardCategory(
                                           title: widget.fullName,
                                           img:
-                                              "https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
+                                              "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"),
                                       //Rating
                                       FutureBuilder(
                                         future: rating,
@@ -134,9 +135,9 @@ class _PaymentState extends State<Payment> {
                                       Text('About: ' + widget.about),
                                     ],
                                   ),
-                                  Text('Charge: Rs. 200' +
+                                  Text('Charge: Rs. 250' +
                                       '\n' +
-                                      'Pay Through Khalti:'),
+                                      'Pay Through: KHALTI'),
                                   Center(
                                     child: RaisedButton(
                                       textColor: NowUIColors.white,

@@ -53,6 +53,7 @@ class _RateState extends State<Rate> {
         extendBodyBehindAppBar: true,
         appBar: Navbar(
           title: "Rate Doctor",
+          bgColor: Color.fromRGBO(88, 124, 202,1.0),
           rightOptions: false,
         ),
         drawer: NowDrawer(

@@ -24,7 +24,8 @@ class _KhaltiPaymentPageState extends State<KhaltiPaymentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Khalti Payment Integration'),
+        backgroundColor: Color.fromRGBO(88, 124, 202,1.0),
+        title: const Text('Khalti Pay'),
       ),
       body: Container(
         padding: const EdgeInsets.all(15),
@@ -55,7 +56,7 @@ class _KhaltiPaymentPageState extends State<KhaltiPaymentPage> {
                     borderRadius: BorderRadius.circular(8),
                     side: const BorderSide(color: Colors.red)),
                 height: 50,
-                color: const Color(0xFF56328c),
+                color: Color.fromRGBO(88, 124, 202,1.0),
                 child: const Text(
                   'Pay With Khalti',
                   style: TextStyle(color: Colors.white, fontSize: 22),
@@ -75,6 +76,7 @@ class _KhaltiPaymentPageState extends State<KhaltiPaymentPage> {
                     onSuccess: (su) {
                       const successsnackBar = SnackBar(
                         content: Text('Payment Successful'),
+                        backgroundColor: Colors.greenAccent,
                       );
                       ScaffoldMessenger.of(context)
                           .showSnackBar(successsnackBar);
@@ -88,6 +90,7 @@ class _KhaltiPaymentPageState extends State<KhaltiPaymentPage> {
                     onFailure: (fa) {
                       const failedsnackBar = SnackBar(
                         content: Text('Payment Failed'),
+                        backgroundColor: Colors.redAccent,
                       );
                       ScaffoldMessenger.of(context)
                           .showSnackBar(failedsnackBar);
@@ -95,6 +98,7 @@ class _KhaltiPaymentPageState extends State<KhaltiPaymentPage> {
                     onCancel: () {
                       const cancelsnackBar = SnackBar(
                         content: Text('Payment Cancelled'),
+                        backgroundColor: Colors.redAccent,
                       );
                       ScaffoldMessenger.of(context)
                           .showSnackBar(cancelsnackBar);
